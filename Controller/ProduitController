@@ -1,0 +1,15 @@
+<?php
+// Cette méthode permet de récupérer un utilisateur
+
+public function getProduit(Client $produit): JsonResponse
+{
+    // Vérifier si l'utilisateur existe et qu'il est actif
+    if (!$client) {
+        return new JsonResponse(['message' => 'Produit introuvable'], JsonResponse::HTTP_NOT_FOUND);
+    }
+
+    // Afficher les informations de l'utilisateur
+    $jsonData = $serializer->serialize($produit, 'json', SerializationContext::create());
+
+    return new JsonResponse($jsonData, JsonResponse::HTTP_OK, [], true);
+}
