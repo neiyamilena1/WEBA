@@ -11,7 +11,7 @@ echo "<h1>Liste des utilisateurs</h1>";
 
 echo "<ul>";
 foreach ($users as $user) {
-    echo "<li>{$user['nom']} - <a href='index.php?action=show&id={$user['id']}'>Détails</a></li>";
+    echo "<li>{$user['nom']} - <a href='index.php?action=show&id={$user['id']}'>{$user['prenom']}</a></li>";
 }
 echo "</ul>";
 
